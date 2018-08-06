@@ -9,7 +9,11 @@ node {
 
        stage('BuildArtifact'){
           // build step
-          sh 'install'
+          
+         def mvn_version = 'M3'
+         withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
+          sh "mvn clean package"
+}
        }
 	   
       stage('Sonar') {
