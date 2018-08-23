@@ -1,6 +1,6 @@
 #!groovy
 
-node {
+node (label: 'myslave3') {
 	   
 	stage('Checkout'){
 
