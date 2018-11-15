@@ -1,6 +1,6 @@
 #!groovy
 
-node (label: 'myslave3') {
+node (label: 'slaves') {
 	   
 	stage('Checkout'){
 
@@ -15,6 +15,7 @@ node (label: 'myslave3') {
           sh "mvn clean package"
 }
        }
+	/*
 	   
       stage('Sonar') {
                     //add stage sonar
@@ -23,5 +24,6 @@ node (label: 'myslave3') {
               sh "mvn sonar:sonar"
                 }
       }
+      */
        
 }
